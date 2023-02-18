@@ -96,13 +96,22 @@ function kartTiklama(olay) {
 
         if (puan == 4){
             var congrats = document.createElement('img');
-            congrats.src = '../img/congratulations.gif';
+            congrats.src = 'congrats.gif';
+            congrats.style.cssText = `
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            `
             imageShow = document.querySelector('body').appendChild(congrats);
             console.log("Image Created");
 
+
+
+
             setTimeout(function(){
                 imageShow.remove();
-                console.log("Image Deleted");
             }, 5000);
         }
 
