@@ -15,10 +15,10 @@ const kartTemplate = `
     </div>
 `;
 
-let randomNum = function(){
+let randomNum = function () {
     let randomArray = [];
-    for (let i = 0; i < 8; i++){
-       let randomNumbers = Math.floor(Math.random() * 99);
+    for (let i = 0; i < 8; i++) {
+        let randomNumbers = Math.floor(Math.random() * 99);
         randomArray.push(randomNumbers, randomNumbers);
         if (randomArray.length > 6) break;
     }
@@ -75,7 +75,7 @@ function kartTiklama(olay) {
         );
         return;
     }
-
+    
     //Daha önce bir açık kartımız varmış, son seçilen karta da açık class vererek tersini çevirelim.
     secilenKart.classList.add("acik");
 
@@ -94,7 +94,7 @@ function kartTiklama(olay) {
 
         puanText.innerHTML = puan;
 
-        if (puan == 4){
+        if (puan == 4) {
             var congrats = document.createElement('img');
             congrats.src = 'congrats.gif';
             congrats.style.cssText = `
@@ -107,10 +107,7 @@ function kartTiklama(olay) {
             imageShow = document.querySelector('body').appendChild(congrats);
             console.log("Image Created");
 
-
-
-
-            setTimeout(function(){
+            setTimeout(function () {
                 imageShow.remove();
             }, 5000);
         }
